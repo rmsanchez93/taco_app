@@ -5,9 +5,16 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(user_params)
-        puts 'creating'
-        render json: @user
+        @user = User.new(user_params)
+            if @user.valid?
+                @user.save
+                render json: @user
+            else
+                render json: 'could not create user'
+            end
+        # @user = User.create(user_params)
+        # puts 'creating'
+        # render json: @user
     end
 
     def new
@@ -33,9 +40,10 @@ class UsersController < ApplicationController
         'destroyin'
     end
     
+    private
     def user_params
-        
-        params.require(:user).permit(:name, :email, :phone, :member_since)
+
+        params.require(:user).permit(:name, :email, :phone, :member_since, :password, :password_confirmation)
     end
 
     
