@@ -15,7 +15,8 @@ class ApplicationController < ActionController::Base
     end
 
     def authenticated
-        render json: 'authenticate is successful'
+        # render json: 'authenticate is successful'
+        
     end
-    
+
 end
