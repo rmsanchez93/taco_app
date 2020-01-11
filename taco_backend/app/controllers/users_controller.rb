@@ -5,10 +5,20 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(user_params)
-        puts 'creating'
+        @user = User.new(user_params)
+        if @user.valid?
+            @user.save
+            render json: @user
+        else
+            render json: 'could not create user'
+        end
+    # @user = User.create(user_params)
+    # puts 'creating'
+    # render json: @user
+        # @user = User.create(user_params)
+        # puts 'creating'
         
-        render json: @user
+        # render json: @user
     end
 
     def new
