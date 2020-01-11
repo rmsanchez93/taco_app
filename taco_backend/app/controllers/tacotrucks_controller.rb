@@ -35,6 +35,8 @@ class TacotrucksController < ApplicationController
         'destroyin'
     end
     
+    private
+    
     def tacotruck_params
         params.require(:tacotruck).permit(:name, :address, :phone)
     end
