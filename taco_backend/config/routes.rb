@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :tacotrucks
 
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  get 'welcome', to: 'session#welcome'
 end
