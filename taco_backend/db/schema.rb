@@ -26,7 +26,11 @@ ActiveRecord::Schema.define(version: 2019_12_12_174720) do
 
   create_table "tacotrucks", force: :cascade do |t|
     t.string "name"
+    t.string "owner"
+    t.string "email"
     t.string "address"
+    t.string "city"
+    t.string "state"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -36,7 +40,14 @@ ActiveRecord::Schema.define(version: 2019_12_12_174720) do
     t.string "name"
     t.string "email"
     t.string "phone"
-    t.string "member_since"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "user_name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

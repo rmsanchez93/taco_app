@@ -26,15 +26,20 @@ class UsersController < ApplicationController
     def update
 
         selected_user = User.find(params[:id])
-        render json: "this is your user #{selected_user.name}"
+        if selected_user  
+            User.update(user_params)
+        end
+        render json: "this is your updated user #{selected_user.name}"
     end
 
     def destroy
         'destroyin'
     end
+
+    private
     
     def user_params
-        params.require(:user).permit(:name, :email, :phone, :member_since)
+        params.require(:user).permit(:name, :email, :phone, :address, :city, :state, :password, :user_name)
     end
 
     
