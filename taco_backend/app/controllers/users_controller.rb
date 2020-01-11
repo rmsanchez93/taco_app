@@ -6,11 +6,12 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
+        # byebug
         if @user.valid?
             @user.save
             render json: @user
         else
-            render json: 'could not create user'
+            render json: @user.errors.messages
         end
     # @user = User.create(user_params)
     # puts 'creating'
