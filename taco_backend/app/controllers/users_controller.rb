@@ -9,17 +9,13 @@ class UsersController < ApplicationController
         # byebug
         if @user.valid?
             @user.save
+            # when User is validated and saved lets go to session object and add 
+            session[:user_id] = @user.id
             render json: @user
         else
             render json: @user.errors.messages
         end
-    # @user = User.create(user_params)
-    # puts 'creating'
-    # render json: @user
-        # @user = User.create(user_params)
-        # puts 'creating'
-        
-        # render json: @user
+   
     end
 
     def new

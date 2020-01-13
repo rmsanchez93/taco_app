@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     def create
         @user = User.find_by(email: params[:email])
         # byebug
-        if @user.authenticate(params[:password])
+        if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             render json: @user, :except => [:created_at, :updated_at]
         else

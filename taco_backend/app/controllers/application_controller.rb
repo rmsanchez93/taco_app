@@ -11,11 +11,18 @@ class ApplicationController < ActionController::Base
     end
 
     def logged_in?
-        !current_user
+        !current_user.nil?
     end
 
     def authenticated
-        # render json: 'authenticate is successful'
+        if logged_in?
+            # auth for when user is logged
+            # JWT here?
+            puts 'we are logged in'
+        else
+            # auth for when there is no session 
+            render json: 'we are not logged in'
+        end
         
     end
 
