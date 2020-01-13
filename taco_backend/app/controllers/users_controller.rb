@@ -26,9 +26,10 @@ class UsersController < ApplicationController
         selected_user = User.find(params[:id])
         render json: "this is your user #{selected_user}"
     end
-
+    
     def show
-        puts 'showing'
+        selected_user = User.find(params[:id])
+        render json: selected_user,:except=> [:created_at, :updated_at], :include => [:reviews]
     end
 
     def update

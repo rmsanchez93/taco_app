@@ -27,8 +27,8 @@ class TacotrucksController < ApplicationController
 
     def update
 
-        selected_user = User.find(params[:id])
-        render json: "this is your user #{selected_user.name}"
+        # selected_user = User.find(params[:id])
+        # render json: "this is your user #{selected_user.name}"
     end
 
     def destroy
