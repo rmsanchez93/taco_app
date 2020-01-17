@@ -8,6 +8,7 @@ class CreateTacotrucks < ActiveRecord::Migration[6.0]
       t.string :city
       t.string :state
       t.string :phone
+      t.integer :user_id
 
       t.timestamps
     end
