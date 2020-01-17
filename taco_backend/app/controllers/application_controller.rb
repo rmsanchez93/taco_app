@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
             @user = User.find(session[:user_id])
         else
             # nil
+            render json: 'we are not logged in'
         end
     end
 
