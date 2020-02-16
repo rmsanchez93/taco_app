@@ -1,7 +1,7 @@
 class TacotrucksController < ApplicationController
     def index
         @tacotrucks = Tacotruck.all
-        render json: @tacotrucks
+        render json: @tacotrucks, :include => [:menus, :menu_items]
     end
 
     def create
