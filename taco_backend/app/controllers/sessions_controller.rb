@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         # byebug
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
-            render json: @user, :except => [:created_at, :updated_at]
+            render json: @user, :except => [:created_at, :updated_at, :password]
         else
             render json: "incorrect email or password"
         end

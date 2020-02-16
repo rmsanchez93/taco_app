@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  taco_truck_id: 1
+
+two:
+  taco_truck_id: 1

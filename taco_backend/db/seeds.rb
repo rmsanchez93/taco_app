@@ -22,6 +22,9 @@ rev1 = Review.create(user_id: raul.id, tacotruck_id: labala.id, review: 'this pl
 rev2 = Review.create(user_id: israel.id, tacotruck_id: labala.id, review: 'this place was straight garbage', rating: 1)
 rev3 = Review.create(user_id: gadi.id, tacotruck_id: labala.id, review: 'this place could be better', rating: 2)
 
+menu_test = Menu.create(tacotruck_id: labala.id)
+
+menu_item_test = MenuItem.create(name: 'tacos de pastor', price: '3.25', menu_id:menu_test.id, tacotruck_id: labala.id, description: '3 tacos made with pastor pork', favorite: false, special: true)
 
 
 

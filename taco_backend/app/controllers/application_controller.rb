@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
     before_action :authenticated
 
     def current_user
+        # byebug
         if session[:user_id]
             @user = User.find(session[:user_id])
         else
