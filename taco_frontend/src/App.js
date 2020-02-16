@@ -1,22 +1,10 @@
 import React from 'react';
+import WelcomePage from './WelcomePage';
 
 function App() {
   return (
   <div>
-      {/* here we want the sign up and login buttons! */}
-
-      <h1> Food Truck App </h1>
-
-      <div>
-            <button>
-              Sign Up 
-            </button>
-
-            <button>
-              Login
-            </button>
-      </div>
-
+     <WelcomePage/>
   </div>
   );
 }
