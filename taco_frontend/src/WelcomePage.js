@@ -3,7 +3,7 @@ import React from 'react';
 
 function WelcomePage(){
     return(
-        <div>
+<div>
              {/* here we want the sign up and login buttons! */}
 
       <h1> Food Truck App </h1>
@@ -17,8 +17,8 @@ function WelcomePage(){
                 Login
             </button>
         </div>
-
-        </div>
+        
+</div>
     )
 };
 
