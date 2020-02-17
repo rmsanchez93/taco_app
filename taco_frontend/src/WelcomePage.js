@@ -31,20 +31,15 @@ class WelcomePage extends React.Component{
     <div className='main-container'>
       <h1> Food Truck App </h1>
 
-      {/* NOTE: For some reason this form makes an error 
-    Error: input is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`.
-            Must find a way to clear problem
-       */}
-
-          {/* <form> 
+          <form> 
 
               <label> Email: </label> 
-                <input type='text' placeholder='Email' name='Email'>  </input>
-               
+                <input type='text' placeholder='Email' name='Email'/>  
+               <br/>
                <label> Password: </label>
-                <input type='text' placeholder='Password '> </input>
+                <input type='text' placeholder='Password '/> 
                 
-          </form> */}
+          </form>
      
 
       <div>
