@@ -1,11 +1,19 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WelcomePage from './WelcomePage';
 
 function App() {
   return (
+
+    
+    <BrowserRouter>
   <div>
-     <WelcomePage/>
-  </div>
+    <Switch>  
+          <Route path='/welcome_page' component={WelcomePage}/>
+          
+    </Switch>   
+  </div>     
+    </BrowserRouter>
   );
 }
 
