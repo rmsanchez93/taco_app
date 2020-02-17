@@ -1,3 +1,7 @@
+/* .welcomePage{
+    background-image: url('https://image.freepik.com/free-vector/food-truck-background_23-2147760022.jpg');
+} */
+
 .main-container{
   display: flex;
   flex-direction: column;
@@ -7,7 +11,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 40px 30px;
   border: rgba(116, 113, 113, 0.589) solid .5px;
-  margin: 50px 50px
+  /* margin: 50px 50px; */
+  margin-top: 25vh;
+  margin-right: 25vh;
+  margin-left: 25vh;
+  
 }
 
 .login{
@@ -40,14 +48,29 @@
    background-color: lightcoral;
 }
 
-/* .signup-container {
-    min-height: calc(91vh - 70px);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    width: 40%;
-  } */
+.loginContainer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    border: rgba(116, 113, 113, 0.589) solid .5px;
+    border-width: .5px;
+    border-radius: 10px;
+    padding: 30px 20px;
+
+}
+.signUpContainer{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-items: center;
+  border: rgba(116, 113, 113, 0.589) solid .5px;
+  border-width: .5px;
+  border-radius: 10px;
+  padding: 30px 20px;
+
+}
+
+
+.submitLogin{
+    align-items: center;
+}
   
   /* .signup-box {
     display: flex;
