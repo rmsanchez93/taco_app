@@ -2,97 +2,110 @@ import React from 'react';
 import './WelcomePage.css';
 
 
-
 class WelcomePage extends React.Component{
 
     state={
-        signUpShow: false,
-        loginShow: false,
         modal: false,
-    }
+    };
 
-    showSignUp = () => {
+  
+    showModal = () => {
         this.setState({
-            signUpShow: !this.state.signUpShow
+            modal: true
         })
     }
 
-    renderSignUpModal = () => {
-        console.log('The SignUpModal should appear')
-        if(this.state.signUpShow === true)
-        return(
-            <form className='signUpContainer'> 
-
-            <label> Full Name: </label> 
-              <input type='text' placeholder='Name Here' name='Full Name'/>  
-             <br/>
-             <label> Email: </label>
-              <input type='text' placeholder='Email' name='Email'/> 
-              <br></br>
-              <label> Password: </label>
-              <input type='text' placeholder='Password' name='Password'/>
-              <br></br>
-
-              <button type='submit' className='submitSignUp'> Show Me Tacos! </button>
-              
-        </form>
-        )
-    }
-
-    renderLoginModal = () => {
+    showModal2 = () => {
         this.setState({
-            loginShow: !this.state.loginShow
+            modal: false
         })
-        console.log('The LoginModal should appear')
-        return(
-            <form className='loginContainer'> 
-
-            <label> Email: </label> 
-              <input type='text' placeholder='Email' name='Email'/>  
-             <br/>
-             <label> Password: </label>
-              <input type='text' placeholder='Password '/> 
-              <br></br>
-              <button type='submit' className='submitLogin'> Login! </button>
-              
-        </form>
-        )
     }
 
+    renderModal = () => {
+        if(this.state.modal === true){
+            console.log('The SignUpModal should appear')
+           return(
+           <div>
+                <h2> Let's Sign Up!</h2>
+                <form className='signUpContainer'> 
 
+                <label> Full Name: </label> 
+                <input type='text' placeholder='Name Here' name='Full Name'/>  
+                <br/>
+                <label> Email: </label>
+                <input type='text' placeholder='Email' name='Email'/> 
+                <br></br>
+                <label> Password: </label>
+                <input type='text' placeholder='Password' name='Password'/>
+                <br></br>
+                <label> Confirm Password: </label>
+                <input type='text' placeholder='Password..Again'/>
+                <br></br>
+
+                <button type='submit' className='submitSignUp'> Show Me Tacos! </button>
+                
+                </form>
+        </div>
+           )
+        }if(this.state.modall === false){
+            console.log('The LoginModal should appear')
+            return(
+            <div>
+                    <h2> Please Log In!</h2>
+                    <form className='loginContainer'> 
+
+                    <label> Email: </label> 
+                    <input type='text' placeholder='Email' name='Email'/>  
+                    <br/>
+                    <label> Password: </label>
+                    <input type='text' placeholder='Password '/> 
+                    <br></br>
+                    <button type='submit' className='submitLogin'> Login! </button>
+                    
+                    </form>
+            </div>
+            ) 
+        }else{
+            return(
+                <div>
+                        <h2> Please Log In!</h2>
+                        <form className='loginContainer'> 
+    
+                        <label> Email: </label> 
+                        <input type='text' placeholder='Email' name='Email'/>  
+                        <br/>
+                        <label> Password: </label>
+                        <input type='text' placeholder='Password '/> 
+                        <br></br>
+                        <button type='submit' className='submitLogin'> Login! </button>
+                        
+                        </form>
+                </div>
+                ) 
+        }
+    };
+
+    
     render(){
 
 
         return(
-            <div className='welcomePage'>
-    <div className='main-container'>
-      <h1> Food Truck App </h1>
-      <br></br>
-
-            
-            {this.renderSignUpModal()}
-            {/* {this.renderLoginModal()} */}
-
-          {/* <form className='changingContainer'> 
-
-              <label> Email: </label> 
-                <input type='text' placeholder='Email' name='Email'/>  
-               <br/>
-               <label> Password: </label>
-                <input type='text' placeholder='Password '/> 
-                <br></br>
-                <button type='submit' className='submitLogin'> Login! </button>
+    <div className='welcomePage'>
+                <div className='main-container'>
+                <h1> Food Truck App </h1>
+             
                 
-          </form> */}
-     <br></br>
-     <br></br>
+           
+            {this.renderModal()}
+          
+                <br></br>
 
 
         <div className='button-container'>
-            <div className='loginButton' onClick={() => this.showLogin()}>
+            <div className='loginButton' onClick={() => this.showModal2()}>
                     <h2> Login  </h2>
             </div>
-            <div className='signupButton' onClick={() => this.showSignUp()}>
+            <div className='signupButton' onClick={() => this.showModal()}>
                     <h2> Sign Up  </h2>
             </div>
         </div>   
