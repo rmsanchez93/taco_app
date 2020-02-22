@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import WelcomePage from './Componets/WelcomePage/WelcomePage';
-import UserDashBoard from './Componets/UserDashBoard/UserDashBoard';
+import WelcomePage from './Components/WelcomePage/WelcomePage';
+import UserDashBoard from './Components/UserDashBoard/UserDashBoard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

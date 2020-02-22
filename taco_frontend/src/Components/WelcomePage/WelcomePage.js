@@ -1,5 +1,6 @@
 import React from 'react';
 import './WelcomePage.css';
+// import image from './favicon.png'
 
 
 class WelcomePage extends React.Component{
@@ -47,7 +48,7 @@ class WelcomePage extends React.Component{
                 </form>
         </div>
            )
-        }if(this.state.modall === false){
+        }if(this.state.modal === false){
             console.log('The LoginModal should appear')
             return(
             <div>
@@ -55,14 +56,17 @@ class WelcomePage extends React.Component{
                     <form className='loginContainer'> 
 
                     <label> Email: </label> 
+                    <br/>
                     <input type='text' placeholder='Email' name='Email'/>  
                     <br/>
                     <label> Password: </label>
+                    <br/>
                     <input type='text' placeholder='Password '/> 
                     <br></br>
                     <button type='submit' className='submitLogin'> Login! </button>
                     
                     </form>
+                    {/* <img src={image}/> */}
             </div>
             ) 
         }else{
