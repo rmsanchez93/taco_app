@@ -1,42 +1,61 @@
-.welcomePage{
-/* background-color: black; */
+/* .welcomePage{
+background-color: red;
 
-}
+} */
 
 html{
+
   /* background-color: black; */
-  background-image: url('https://image.freepik.com/free-vector/food-truck-background_23-2147760022.jpg');
+  /* background-image: url('https://miro.medium.com/max/620/1*5_HhPs-h4zZCqVV8xOkiTA.png'); */
   /* background-repeat: no-repeat; */
   /* background-size: 1500px 1000px; */
+    /* background-color: lightpink; */
+  /* background-size: auto; */
 
 }
 
+#root{
+  height: 100vh;
+}
+
+
 .main-container{
-  /* background-image: url('https://image.freepik.com/free-vector/food-truck-background_23-2147760022.jpg'); */
+  background-image: url('https://cdn0.iconfinder.com/data/icons/old-people-care-blue-line/64/32_diet-food-cafe-512.png');
+  background-repeat: no-repeat;
+  background-position: center;
   /* background-color: rgba(0, 0, 0, 0.7); */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
   border-width: .5px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 40px 30px;
+  /* padding: 40px 30px; */
   border: rgba(116, 113, 113, 0.589) solid .5px;
-  /* margin: 50px 50px; */
-  margin-top: 25vh;
+  /* margin: 160px 160px; */
+  margin-top: 15vh;
   margin-right: 25vh;
   margin-left: 25vh;
   
+  /* background-color: lightgreen; */
+  text-align: center;
+   /* background-color: rgb(0,0,0); Fallback color */
+   /* background-color: rgba(0,0,0, 0.4); Black w/opacity/see-through */
+  /* font-weight: bold; */
 }
 
-.login{
+/* .login{
     background-color: lightblue;
-}
+} */
 
 .button-container{
     /* border: 3px solid red; */
     width: 40%;
     padding: 10px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+
 }
 
 .loginButton{
@@ -44,19 +63,19 @@ html{
    text-align: center;
    float: left;
    height: 10%;
-   width: 25%;
-   padding: 10px;
-   background-color: lightblue;
+   width: 40%;
+   padding: 15px;
+   /* background-color: lightblue; */
 }
 
 .signupButton{
    /* color: green;  */
    text-align: center;
    height: 10%;
-   width: 25%;
-   padding: 10px;
-   margin-left: 80%;
-   background-color: lightcoral;
+   width: 40%;
+   padding: 15px;
+   margin-left: 60%;
+   /* background-color: lightcoral; */
 }
 
 .loginContainer{
@@ -79,7 +98,7 @@ html{
 }
 
 
-.submitLogin{
+.submitButton{
     align-items: center;
 }
   
